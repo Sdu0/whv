@@ -61,7 +61,6 @@
 a {
   color: #C3CCE9;
 }
-
 </style>
 
 <body>
@@ -109,16 +108,29 @@ a {
           </div>
           <div class="panel panel-default">
             <div class="panel-heading">
-              <i class="fa fa-bell fa-fw"></i> 版面目录
+              <i class="fa fa-bell fa-fw"></i> 按日期查询
             </div>
             <!-- /.panel-heading -->
-            <div class="panel-body">
-              <div class="list-group" style="height: 200px;">
-                <a href="#" class="list-group-item">
-                  <i class="fa fa-comment fa-fw"></i> 第1版 : 头条
-                  <span class="pull-right text-muted small"><em>图标</em></span>
-                </a>
+            <div class="panel-body" style="height: 200px;">
+              <div class="form-group">
+                <label>开始时间 <span class="required">*</span></label>
+                <div class='input-group'>
+                  <input class="form-control" placeholder="开始时间" type="text" required="required" name="startAt" />
+                  <span class="input-group-addon">
+                          <span class="fa fa-calendar"></span>
+                  </span>
+                </div>
               </div>
+              <div class="form-group">
+                <label>结束时间 <span class="required">*</span></label>
+                <div class='input-group'>
+                  <input class="form-control" placeholder="结束时间" type="text" required="required" name="endAt" />
+                  <span class="input-group-addon">
+                          <span class="fa fa-calendar"></span>
+                  </span>
+                </div>
+              </div>
+              <button type="button" class="btn btn-primary pull-right">查询</button>
             </div>
             <!-- /.panel-body -->
           </div>
@@ -231,6 +243,80 @@ a {
   <script src="../data/morris-data.js"></script>
   <!-- Custom Theme JavaScript -->
   <script src="../dist/js/sb-admin-2.js"></script>
+  <!-- Bootstrap DaterangePicker CSS -->
+  <link href="../vendor/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet" />
+  <!-- Moment JavaScript -->
+  <script src="../vendor/moment/moment-with-locales.min.js"></script>
+  <!-- Bootstrap DaterangePicker JavaScript -->
+  <script src="../vendor/bootstrap-daterangepicker/daterangepicker.js"></script>
+  <script type="text/javascript">
+  $(function() {
+    daterange = function() {
+      var start = moment().subtract(29, 'days')
+      var end = moment()
+
+      function cb(start, end) {
+        var namespace = App
+        var func = window.location.pathname.split('/')[1]
+
+        $('#date-range span').html(start.format('YYYY-MM-DD') + ' - ' + end.format('YYYY-MM-DD'))
+        namespace[func]['api'](start.format('YYYY-MM-DD'), end.format('YYYY-MM-DD'))
+      }
+
+      $('#date-range').daterangepicker({
+        ranges: {
+          '过去一周内': [
+            moment().subtract(6, 'days'), moment()
+          ],
+          '过去30天内': [
+            moment().subtract(29, 'days'), moment()
+          ],
+          '过去半年内': [
+            moment().subtract(5, 'month').startOf('month'),
+            moment().endOf('month')
+          ],
+          '过去一年内': [
+            moment().subtract(11, 'month').startOf('month'),
+            moment().endOf('month')
+          ]
+        },
+        locale: {
+          format: 'YYYY-MM-DD',
+          separator: ' - ',
+          applyLabel: '确定',
+          cancelLabel: '取消',
+          fromLabel: '从',
+          toLabel: '到',
+          customRangeLabel: '自定义日期范围…'
+        },
+        startDate: start,
+        endDate: end,
+      }, cb);
+
+      cb(start, end);
+    }
+    daterangepicker = function(node) {
+      node.daterangepicker({
+        singleDatePicker: true,
+        showDropdowns: true,
+        locale: {
+          format: 'YYYY-MM-DD',
+          separator: ' - ',
+          applyLabel: '确定',
+          cancelLabel: '取消',
+          fromLabel: '从',
+          toLabel: '到',
+          customRangeLabel: '自定义日期范围…',
+          daysOfWeek: ["日", "一", "二", "三", "四", "五", "六"],
+          monthNames: ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
+        },
+      })
+    }
+
+    daterangepicker($('input[name="startAt"]'))
+    daterangepicker($('input[name="endAt"]'))
+  })
+  </script>
 </body>
 
 </html>
