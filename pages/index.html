@@ -26,53 +26,55 @@
     <![endif]-->
 </head>
 <style type="text/css">
-.custome-footer {
-  background: #A29EAD;
-  color: white;
-}
-
-a {
-  color: white;
-}
-
-.navbar-custom {
-  height: 140px;
-  background-image: url(../images/bgtop.jpg);
-  margin-bottom: 0;
-}
-
-.custome-top-right {
-  height: 120px;
-  width: 30%;
-  margin-top: 37px;
-  background-image: url(../images/logo.png);
+.header {
+  height: 71px;
+  line-height: 71px;
+  background-color: #1E90FF;
   background-repeat: no-repeat;
-  background-position: 0px 0px;
-  display: block;
+  background-position: 800px 0px;
+  overflow: hidden;
+  margin: 0px auto;
+  width: 100%;
+}
+
+.header {
+  background-image: url(../images/bgtop.gif);
+}
+
+.homelogo {
+  float: left;
+  background-image: url(../images/bgimg.png);
+  margin-top: 8px;
+}
+
+.custome-footer {
+  padding-top: 20px;
+  height: 140px;
+  background-color: #4169C3;
+  color: #C3CCE9;
+  background-image: url(../images/bgfooter.gif);
+  background-repeat: no-repeat;
+  background-position: 680px 0px;
   overflow: hidden;
 }
 
-.custome-heading {
-  height: 40px;
-  background-image: url(../images/bgline.jpg);
+a {
+  color: #C3CCE9;
 }
+
 </style>
 
 <body>
   <div id="wrapper">
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-static-top navbar-custom" role="navigation">
-      <div class="col-md-6 custome-top-left">
+    <div class="col-md-16 ">
+      <div class="row header">
+        <div class="panel homelogo">
+        </div>
       </div>
-      <div class="col-md-6 custome-top-right">
-      </div>
-    </nav>
+    </div>
     <div class="col-md-16">
       <div class="row">
         <div class="panel">
-          <div class="panel-heading custome-heading">
-          </div>
-          <!-- /.panel-heading -->
         </div>
       </div>
     </div>
@@ -202,7 +204,7 @@ a {
             <div class="panel-body custome-footer">
               <div id="collapseOne" class="panel-collapse collapse in">
                 <div class="panel-body text-center">
-                  Copyright 2016 武汉软件工程职业学院 版权所有 All Right Reserved
+                  Copyright 2017 武汉软件工程职业学院 版权所有 All Right Reserved
                   <br /> 学院地址：武汉市东湖新技术开发区光谷大道117号　邮编：430205　邮箱：
                   <a href="mailto:whvcse2014@126.com">whvcse2014@126.com</a>
                   <br /> 鄂ICP备11010169号
@@ -215,19 +217,20 @@ a {
       </div>
       <!-- /.row -->
     </div>
-    <!-- /#wrapper -->
-    <!-- jQuery -->
-    <script src="../vendor/jquery/jquery.min.js"></script>
-    <!-- Bootstrap Core JavaScript -->
-    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
-    <!-- Metis Menu Plugin JavaScript -->
-    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
-    <!-- Morris Charts JavaScript -->
-    <script src="../vendor/raphael/raphael.min.js"></script>
-    <script src="../vendor/morrisjs/morris.min.js"></script>
-    <script src="../data/morris-data.js"></script>
-    <!-- Custom Theme JavaScript -->
-    <script src="../dist/js/sb-admin-2.js"></script>
+  </div>
+  <!-- /#wrapper -->
+  <!-- jQuery -->
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <!-- Bootstrap Core JavaScript -->
+  <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+  <!-- Metis Menu Plugin JavaScript -->
+  <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+  <!-- Morris Charts JavaScript -->
+  <script src="../vendor/raphael/raphael.min.js"></script>
+  <script src="../vendor/morrisjs/morris.min.js"></script>
+  <script src="../data/morris-data.js"></script>
+  <!-- Custom Theme JavaScript -->
+  <script src="../dist/js/sb-admin-2.js"></script>
 </body>
 
 </html>
