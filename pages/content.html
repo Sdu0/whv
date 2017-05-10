@@ -54,8 +54,16 @@
   overflow: hidden;
 }
 
-a {
+#footer_a {
   color: #C3CCE9;
+}
+
+.header_a {
+  color: #333;
+}
+
+a:link {
+  text-decoration: blink;
 }
 
 .brief {
@@ -66,6 +74,16 @@ a {
 .icon {
   height: 75%;
   width: 75%;
+}
+
+.time {
+  position: relative;
+  left: 25%;
+}
+
+.title {
+  position: relative;
+  left: 45%;
 }
 </style>
 
@@ -92,152 +110,97 @@ a {
           <div class="panel panel-primary">
             <img src="../images/2017-05/01/201705011_brief.jpg" class="brief">
           </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="panel panel-primary">
-            <div class="panel-heading">
-              <i class="fa fa-th fa-fw"></i> 版面目录
-            </div>
-            <!-- /.panel-heading -->
-            <div class="panel-body">
-              <div class="list-group" style="height: 400px;">
-                <a href="#" class="list-group-item">
-                  第1版 : 头条
-                  <span class="pull-right text-muted small"><img height="16" src="../images/pdf.gif" width="16" border="0"></span>
-                </a>
-                <a href="#" class="list-group-item">
-                  第2版 : 武汉新闻
-                  <span class="pull-right text-muted small"><img height="16" src="../images/pdf.gif" width="16" border="0"></span>
-                </a>
-                <a href="#" class="list-group-item">
-                  第3版 : 武汉新闻
-                  <span class="pull-right text-muted small"><img height="16" src="../images/pdf.gif" width="16" border="0"></span>
-                </a>
-                <a href="#" class="list-group-item">
-                  第4版 : 时事新闻
-                  <span class="pull-right text-muted small"><img height="16" src="../images/pdf.gif" width="16" border="0"></span>
-                </a>
-                <a href="#" class="list-group-item">
-                  第5版 : 专题
-                  <span class="pull-right text-muted small"><img height="16" src="../images/pdf.gif" width="16" border="0"></span>
-                </a>
-                <a href="#" class="list-group-item">
-                  第6版 : 文体新闻
-                  <span class="pull-right text-muted small"><img height="16" src="../images/pdf.gif" width="16" border="0"></span>
-                </a>
-              </div>
-            </div>
-            <!-- /.panel-body -->
-          </div>
-          <div class="panel panel-yellow">
-            <div class="panel-heading">
-              <i class="fa fa-calendar fa-fw"></i> 按日期查询
-            </div>
-            <!-- /.panel-heading -->
-            <div class="panel-body" style="height: 200px;">
-              <div class="form-group">
-                <label>开始时间 <span class="required">*</span></label>
-                <div class='input-group'>
-                  <input class="form-control" placeholder="开始时间" type="text" required="required" name="startAt" />
-                  <span class="input-group-addon">
-                          <span class="fa fa-calendar"></span>
-                  </span>
-                </div>
-              </div>
-              <div class="form-group">
-                <label>结束时间 <span class="required">*</span></label>
-                <div class='input-group'>
-                  <input class="form-control" placeholder="结束时间" type="text" required="required" name="endAt" />
-                  <span class="input-group-addon">
-                          <span class="fa fa-calendar"></span>
-                  </span>
-                </div>
-              </div>
-              <button type="button" class="btn btn-primary pull-right">查询</button>
-            </div>
-            <!-- /.panel-body -->
-          </div>
-        </div>
-        <!-- /.col-lg-8 -->
-        <div class="col-lg-3">
-          <div class="panel panel-info">
-            <div class="panel-heading">
-              <i class="fa fa-th-list fa-fw"></i> 标题目录
-            </div>
-            <!-- /.panel-heading -->
-            <div class="panel-body">
-              <div class="list-group" style="height: 400px;">
-                <a href="#" class="list-group-item">
-                  <i class="fa fa-bookmark fa-fw"></i>&nbsp;&nbsp;&nbsp;五轴一体景观构想披露
-                </a>
-                <a href="#" class="list-group-item">
-                  <i class="fa fa-bookmark fa-fw"></i>&nbsp;&nbsp;&nbsp;五轴一体景观构想披露
-                </a>
-                <a href="#" class="list-group-item">
-                  <i class="fa fa-bookmark fa-fw"></i>&nbsp;&nbsp;&nbsp;五轴一体景观构想披露
-                </a>
-                <a href="#" class="list-group-item">
-                  <i class="fa fa-bookmark fa-fw"></i>&nbsp;&nbsp;&nbsp;五轴一体景观构想披露
-                </a>
-                <a href="#" class="list-group-item">
-                  <i class="fa fa-bookmark fa-fw"></i>&nbsp;&nbsp;&nbsp;五轴一体景观构想披露
-                </a>
-                <a href="#" class="list-group-item">
-                  <i class="fa fa-bookmark fa-fw"></i>&nbsp;&nbsp;&nbsp;五轴一体景观构想披露
-                </a>
-                <a href="#" class="list-group-item">
-                  <i class="fa fa-bookmark fa-fw"></i>&nbsp;&nbsp;&nbsp;五轴一体景观构想披露
-                </a>
-              </div>
-            </div>
-          </div>
-          <!-- /.panel-body -->
-        </div>
-        <!-- /.col-lg-3 -->
-      </div>
-      <!-- /.row -->
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="panel panel-green">
+          <div class="panel panel-default">
             <div class="panel-heading">
               <i class="fa fa-link fa-fw"></i> 版面导航
             </div>
             <!-- /.panel-heading -->
             <div class="panel-body">
-              <div class="col-md-2 text-center">
+              <div class="col-md-3 text-center">
                 <img src="../images/2017-05/01/201705011_icon.jpg" class="icon">
                 <h5><strong>第1版</strong></h5>
                 <span>头版</span>
               </div>
-              <div class="col-md-2 text-center">
+              <div class="col-md-3 text-center">
                 <img src="../images/2017-05/01/201705011_icon.jpg" class="icon">
                 <h5><strong>第2版</strong></h5>
                 <span>武汉新闻</span>
               </div>
-              <div class="col-md-2 text-center">
+              <div class="col-md-3 text-center">
                 <img src="../images/2017-05/01/201705011_icon.jpg" class="icon">
                 <h5><strong>第3版</strong></h5>
                 <span>武汉新闻</span>
               </div>
-              <div class="col-md-2 text-center">
+              <div class="col-md-3 text-center">
                 <img src="../images/2017-05/01/201705011_icon.jpg" class="icon">
                 <h5><strong>第4版</strong></h5>
                 <span>时事新闻</span>
               </div>
-              <div class="col-md-2 text-center">
-                <img src="../images/2017-05/01/201705011_icon.jpg" class="icon">
-                <h5><strong>第5版</strong></h5>
-                <span>专题</span>
-              </div>
-              <div class="col-md-2 text-center">
-                <img src="../images/2017-05/01/201705011_icon.jpg" class="icon">
-                <h5><strong>第6版</strong></h5>
-                <span>文体新闻</span>
-              </div>
             </div>
           </div>
-          <!-- /.panel-body -->
         </div>
+        <div class="col-lg-7">
+          <div class="panel panel-default">
+            <div class="panel-heading" style="background-color: #dff0d8;">
+              <small style="float: left">
+              <a href="#" class="header_a previous"><i class="fa fa-caret-left fa-fw"></i> 上一篇</a>
+              <a href="#" class="header_a next">下一篇<i class="fa fa-caret-right fa-fw"></i></a>
+              </small>
+              <span class="time">2017年05月01日</span>
+              <small style="float: right;">
+              <a href="#" class="header_a enlarge">放大<i class="fa fa-plus-circle fa-fw"></i></a>
+              <a href="#" class="header_a narrow">缩小<i class="fa fa-minus-circle fa-fw"></i></a>
+              <a href="#" class="header_a default">默认<i class="fa fa-info-circle fa-fw"></i></a>
+              </small>
+            </div>
+            <div class="panel-heading" style="background-color: #d9edf7;">
+              <strong class="title">-- 头版 --</strong>
+              <small><em class="pull-right">版次[1]</em></small>
+            </div>
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+                <!--enpcontent-->
+                <p></p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;记者贾代腾飞&nbsp;发自雄安新区</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;夜幕下的雄安新区，钩月伴着蛙鸣</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;白洋淀火了，一起火的还有白洋淀的鸭蛋</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;地处雄安新区的“华北明珠”白洋淀迎来“五一”小长假。昨日，记者驱车前往白洋淀，在离景区大门还有三四公里的地方，就只能停车，步行前往了。路边停放的车辆以北京和天津牌照的小车最多。</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;总面积366平方公里的白洋淀，芦苇葳蕤，水鸟纷飞，最让人熟知的，莫过于《小兵张嘎》的故事。在白洋淀边开着农家乐的张凯说，他早早就请了七八个亲友过来帮忙，迎战游客高峰。</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;船夫：一上午就跑了6趟</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;白洋淀里最著名的景点，就是荷花大观园。虽然现在不是荷花开放的季节，但游客们都愿意租一条船，泛舟湖面，前往观赏。</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;在码头，各式各样的游船不断地接送游客，船夫张旺说，他一上午就跑了6趟。来自天津的游客李坤笑称，别的景区是堵车，白洋淀里要“堵船”了。</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;农户：一天卖几千个咸鸭蛋</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;以往白洋淀的农民，靠水吃水，随着来的人越来越多，新的生意不断涌现。淀子里的农户李霞，靠卖鸭蛋乐开了花，“我们喂的鸭子，都在白洋淀里觅食，用这里的鸭蛋做成咸蛋，黄又酥又香，游客经常一买就是一两百个。一天卖几千个没问题。”&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;农家乐老板：新区设立后，游客明显多起来</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;36岁的张凯，过去做着户外服装的生意，走南闯北，去过不少地方。两年前，他回到老家，把祖宅重新装修了一番，与弟弟一起，开起了农家乐。张凯把民宿的概念，引入农家乐，装修得窗明几净。雄安新区设立后，张凯明显感觉生意好了。“以前四五月份，并不是白洋淀的旅游旺季，但现在每天都有游客来，我请了三个全勤的厨师，都还忙得不可开交”。</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;时至下午三点，张凯收拾完中午最后一桌客人的碗筷后，才有时间啃一口油条填饱肚子。对于未来新区的畅想，张凯闲暇时也会跟朋友们闲聊。“他们猜测拆迁补偿我都不插嘴，无论多少，生活肯定越来越好。”张凯说，新区成立后，教育、医疗都会改善，自己的孩子长大后，才是最大的受益人。“我现在吃根油条也能饱，以后条件好了，吃顿大龙虾也能饱，不管是油条还是龙虾，饱的感觉是一样的，所以我很知足。”张凯脸上笑盈盈的。&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;游客：校友纷纷要回来建设“根据地”</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;来自天津的杨易，曾就读于华北电力大学保定校区。上大学时，他就和同学们来白洋淀玩过两次。杨易说，此次来，明显觉得白洋淀景区更规范了，虽然游客很多，但井然有序。杨易把白洋淀的照片，发到了大学校友的微信群里，不少同学跟他打趣，说要回去建设“根据地”。</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;春日的雄安新区，杨絮飘飘，小麦葱葱。在这片土地上，虽然还未动工建设，尘土飞扬，但人们的心已经热了。改变，已然发生。</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;入夜后的大张庄很是热闹</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;白洋淀里游船如织</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;曾在保定读大学的杨易，明显感觉白洋淀景区更规范了，虽然游客很多，但井然有序。游玩白洋淀的照片刷屏校友微信群，不少同学表示心热了，要回去建设。</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;昨日，一名游客欣赏白洋淀水道上延绵不绝的各类游船</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;记者贾代腾飞&nbsp;摄</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;5版</p>
+                <p></p>
+            </div>
+            <!-- /.panel-body -->
+            <div class="panel-footer">
+              <small style="float: left">
+              <a href="#" class="header_a previous"><i class="fa fa-caret-left fa-fw"></i> 上一篇</a>
+              <a href="#" class="header_a next">下一篇<i class="fa fa-caret-right fa-fw"></i></a>
+              </small>
+              <span class="time">2017年05月01日</span>
+              <small style="float: right;">
+              <a href="#" class="header_a enlarge">放大<i class="fa fa-plus-circle fa-fw"></i></a>
+              <a href="#" class="header_a narrow">缩小<i class="fa fa-minus-circle fa-fw"></i></a>
+              <a href="#" class="header_a default">默认<i class="fa fa-info-circle fa-fw"></i></a>
+              </small>
+            </div>
+          </div>
+        </div>
+        <!-- /.col-lg-8 -->
       </div>
       <!-- /.row -->
     </div>
@@ -252,7 +215,7 @@ a {
                 <div class="panel-body text-center">
                   Copyright 2017 武汉软件工程职业学院 版权所有 All Right Reserved
                   <br /> 学院地址：武汉市东湖新技术开发区光谷大道117号　邮编：430205　邮箱：
-                  <a href="mailto:whvcse2014@126.com">whvcse2014@126.com</a>
+                  <a href="mailto:whvcse2014@126.com" id="footer_a">whvcse2014@126.com</a>
                   <br /> 鄂ICP备11010169号
                 </div>
               </div>
