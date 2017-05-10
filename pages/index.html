@@ -29,6 +29,7 @@
 .header {
   height: 71px;
   line-height: 71px;
+  background-image: url(../images/bgtop.gif);
   background-color: #1E90FF;
   background-repeat: no-repeat;
   background-position: 800px 0px;
@@ -37,14 +38,9 @@
   width: 100%;
 }
 
-.header {
-  background-image: url(../images/bgtop.gif);
-}
-
-.homelogo {
-  float: left;
-  background-image: url(../images/bgimg.png);
-  margin-top: 8px;
+#logo {
+  position: relative;
+  left: 10%;
 }
 
 .custome-footer {
@@ -66,8 +62,9 @@ a {
 <body>
   <div id="wrapper">
     <div class="col-md-16 ">
-      <div class="row header">
-        <div class="panel homelogo">
+      <div class="row">
+        <div class="panel header">
+          <img src="../images/bgimg.png" id="logo">
         </div>
       </div>
     </div>
@@ -99,8 +96,8 @@ a {
             <div class="panel-body">
               <div class="list-group" style="height: 400px;">
                 <a href="#" class="list-group-item">
-                  <i class="fa fa-comment fa-fw"></i> 第1版 : 头条
-                  <span class="pull-right text-muted small"><em>图标</em></span>
+                  第1版 : 头条
+                  <span class="pull-right text-muted small"><img height="16" src="../images/pdf.gif" width="16" border="0"></span>
                 </a>
               </div>
             </div>
